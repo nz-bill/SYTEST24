@@ -1,0 +1,26 @@
+name: CI build and test
+
+on:
+  push:
+    branches:
+      ["master"]
+  pull_request:
+    branches:
+      ["master"]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+
+      - name: Setup JAVA
+        uses: actions/setup-java@v5
+        with:
+          distribution: 'jetbrains'
+          java-version: '17'
+
+      - name: Build and test
+        run: mvn clean verify
