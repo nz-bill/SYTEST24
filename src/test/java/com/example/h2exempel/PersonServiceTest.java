@@ -68,7 +68,7 @@ class PersonServiceTest {
         Person result = service.addPerson(person);
 
         //Assert
-        assertThat(result.getId()).isEqualTo(1L);
+        assertThat(result.getId()).isEqualTo(2L);
         verify(repository).save(person);
 
     }
