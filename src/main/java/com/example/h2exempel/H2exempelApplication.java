@@ -3,6 +3,8 @@ package com.example.h2exempel;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+
+//en instruktiv kommentar
 @SpringBootApplication
 public class H2exempelApplication {
 
